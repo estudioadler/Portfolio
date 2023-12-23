@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight } from "@phosphor-icons/react";
 import { Button } from "../Button/Button";
 import Link from "next/link";
 export const Contact = () => {
