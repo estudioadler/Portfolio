@@ -70,7 +70,7 @@ export const Contact = () => {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-2 md:w-1/2">
         <input
-          className="resize-none p-4 text-sm rounded-lg outline outline-1 outline-neutral-900 bg-transparent text-neutral-50 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-400"
+          className="resize-none p-4 text-sm rounded-lg outline-hover"
           type="text"
           id="nome"
           name="nome"
@@ -78,7 +78,7 @@ export const Contact = () => {
           required
         />
         <input
-          className="resize-none p-4 text-sm rounded-lg outline outline-1 outline-neutral-900 bg-transparent text-neutral-50 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-400"
+          className="resize-none p-4 text-sm rounded-lg outline-hover"
           type="email"
           id="email"
           name="email"
@@ -86,7 +86,7 @@ export const Contact = () => {
           required
         />
         <textarea
-          className="resize-none p-4 text-sm rounded-lg outline outline-1 outline-neutral-900 bg-transparent text-neutral-50 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-400"
+          className="resize-none p-4 text-sm rounded-lg outline-hover"
           id="mensagem"
           name="mensagem"
           placeholder="Digite sua mensagem"

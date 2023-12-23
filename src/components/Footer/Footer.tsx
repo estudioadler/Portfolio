@@ -15,7 +15,7 @@ export const Footer = () => {
         {currentYear} - Adler Gabriel
       </div>
       
-      <Link href={"#"} className="grid grid-cols-2 gap-1 transform rotate-45">
+      <Link href={"#"} className="grid grid-cols-2 gap-1 transform rotate-45 hover:bg-neutral-100 p-4 rounded-full">
           <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
           <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
           <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>

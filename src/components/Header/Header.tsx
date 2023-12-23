@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { Copyright, X } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -21,12 +22,13 @@ export const Header = () => {
   ];
 
   return (
-    <header className="flex justify-between items-center w-full h-20 md:h-28 font-sora">
+    <header className="flex justify-between items-center w-full h-20 md:h-32 font-sora">
       {/* logotipo */}
-      <Link href={"#"} >
-      <div className="flex gap-2 items-center text-xs text-neutral-500">
-        <Copyright size={18} />
-        Adler Gabriel
+      <Link href={"#"} className="flex items-center gap-3">
+        <Image src="/eu.png" alt="logo" width={40} height={40} className="rounded-full shadow-sm" />
+      <div className="flex flex-col text-sm text-neutral-500">
+        <span>Adler Gabriel</span>
+        <span className="text-xs text-neutral-400">- Availabre to Work</span>
       </div>
       </Link>
       {/* botao do menu */}
@@ -63,7 +65,7 @@ export const Header = () => {
         <Link
           href={"#"}
           onClick={toggleMenu}
-          className="text-neutral-100 bg-neutral-900 absolute top-4 md:top-8 right-3.5 md:right-16 p-3.5 rounded-full hover:bg-neutral-800 active:bg-neutral-700"
+          className="text-neutral-100 bg-neutral-900 absolute top-10 md:top-16 right-6 md:right-16 p-3.5 rounded-full hover:bg-neutral-800 active:bg-neutral-700"
         >
             <X size={18} weight="regular" />
         </Link>

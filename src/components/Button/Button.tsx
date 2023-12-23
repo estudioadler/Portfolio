@@ -12,7 +12,7 @@ export const Button = ({ text, iconLeft, variant, outline }: ButtonProps) => {
   return (
     <button
       draggable={false}
-      className={`group md:block w-max rounded-full bg-transparent outline outline-1 outline-neutral-700 py-3.5 px-5 relative overflow-hidden
+      className={`group md:block w-max rounded-full bg-transparent outline outline-1 outline-neutral-300 hover:outline-neutral-400 py-3.5 px-5 relative overflow-hidden
       ${variant === 'black' ? 'bg-neutral-900 text-neutral-100' : 'bg-neutral-50 text-neutral-900'} ${
         outline ? 'outline outline-1 outline-neutral-900' : '' // Adicionando a classe de borda condicional
       }`}
