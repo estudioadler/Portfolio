@@ -1,16 +1,10 @@
 "use client"
 
-import { ArrowRight, InstagramLogo } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "../Button/Button";
 import Link from "next/link";
-import { useForm } from "react-hook-form";
-
 export const Contact = () => {
-  const { handleSubmit, register } = useForm()
 
-  const onSubmit = (data: any) => {
-    console.log(data)
-  } 
   
   return (
     <section className="md:flex justify-between font-sora">
@@ -67,7 +61,6 @@ export const Contact = () => {
         </div>
       </div>
       <form 
-        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-2 md:w-1/2">
         <input
           className="resize-none p-4 text-sm rounded-lg outline-hover"
