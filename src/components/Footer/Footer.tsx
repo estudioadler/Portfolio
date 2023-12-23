@@ -1,4 +1,4 @@
-import { Copyright, Moon, Sun, Monitor, ArrowUp } from "@phosphor-icons/react/dist/ssr";
+import { Copyright } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 
 export const Footer = () => {
