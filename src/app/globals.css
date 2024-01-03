@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply container mx-auto p-6
+  @apply container mx-auto px-6 py-2 bg-neutral-50
 } 
 .menu-animado {
   @apply translate-x-full transition-transform duration-[0.3s] ease-[ease];
@@ -16,4 +16,16 @@ body {
 
 .outline-hover {
   @apply p-3 outline outline-1 outline-neutral-300 hover:outline-neutral-400 hover:transition ease-in-out duration-300
+}
+.underline-hover-effect {
+  @apply inline-block relative mt-2
+}
+
+.underline-hover-effect::after {
+  content: "";
+  @apply absolute w-full transform scale-x-0 h-px bottom-0 left-0 bg-neutral-900 origin-bottom-left transition-transform duration-[0.3s] ease-out;
+}
+
+.underline-hover-effect:hover::after {
+  @apply transform scale-100 origin-bottom-left;
 }

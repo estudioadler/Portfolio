@@ -3,11 +3,19 @@
 import { ArrowRight } from "@phosphor-icons/react";
 import { Button } from "../Button/Button";
 import Link from "next/link";
+import { Links } from "../Links/Links";
 export const Contact = () => {
 
-  
+  const socialLinks = [
+    { label: "Github", link: "https://github.com/estudioadler" },
+    { label: "Linkedin", link: "https://www.linkedin.com/in/adlergabriel" },
+    { label: "Twitter", link: "https://twitter.com/a_gabriel20" },
+    { label: "Instagram", link: "https://www.instagram.com/adler__gabriel" },
+  ]
+
+
   return (
-    <section className="md:flex justify-between font-sora">
+    <section className="md:flex justify-between font-sora py-8 md:py-20">
       <div className="flex flex-col gap-8 max-w-md">
         <h1 className="text-3xl font-medium uppercase font-sans">Entre em contato comigo.</h1>
         <p className="text-neutral-500">
@@ -15,55 +23,22 @@ export const Contact = () => {
           sugestão ou ideia, estou aqui para ajudar. Vamos começar essa
           conversa.
         </p>
+        {/*social links*/}
         <div className="flex justify-between mb-8">
           <ul className="flex flex-col gap-2">
-            <li>
-              <Link
-                href={""}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-hover-effect"
-              >
-                Instagram
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={""}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-hover-effect"
-              >
-                Linkedin
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={""}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-hover-effect"
-              >
-                Github
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={""}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-hover-effect"
-              >
-                Behance
-              </Link>
-            </li>
+            {socialLinks.map((link: any) => (
+              <li key={link.label} className="flex items-baseline gap-2">
+                <Links url={link.link} icon={<ArrowRight size={16} />}>{link.label}</Links>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-      <form 
+      {/*form*/}
+      <form
         className="flex flex-col gap-2 md:w-1/2">
         <input
-          className="resize-none p-4 text-sm rounded-lg outline-hover"
+          className="bg-transparent resize-none p-4 text-sm rounded-md outline-hover"
           type="text"
           id="nome"
           name="nome"
@@ -71,7 +46,7 @@ export const Contact = () => {
           required
         />
         <input
-          className="resize-none p-4 text-sm rounded-lg outline-hover"
+          className="bg-transparent resize-none p-4 text-sm rounded-md outline-hover"
           type="email"
           id="email"
           name="email"
@@ -79,7 +54,7 @@ export const Contact = () => {
           required
         />
         <textarea
-          className="resize-none p-4 text-sm rounded-lg outline-hover"
+          className="bg-transparent resize-none p-4 text-sm rounded-md outline-hover"
           id="mensagem"
           name="mensagem"
           placeholder="Digite sua mensagem"

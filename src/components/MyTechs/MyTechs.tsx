@@ -1,22 +1,18 @@
 
-import { getRelativeTimeString } from "@/utils/get-relative-time"
-
 interface IMyTechsProps{
-  icon: React.ReactNode
   name: string,
-  startDate: string
 }
 
-export const MyTechs = ({icon, name, startDate}:IMyTechsProps) => {
-  const relativeTime = getRelativeTimeString(new Date(startDate), 'pt-BR',).replace('há', '')
+export const MyTechs = ({name}:IMyTechsProps) => {
   return (
-    <div className='flex flex-col gap-4 w-full p-6 bg-neutral-900 font-sora'>
-        <div key={name} className='flex items-center justify-between'>
-          {name}
-          {icon}
+    <>
+    <div className='flex flex-col gap-4 w-fit py-1.5 px-3 bg-neutral-100 rounded-md font-sora'>
+        <div key={name} className='flex items-center justify-center'>
+          {name}        
         </div>
-      <span className="text-sm text-neutral-500">{relativeTime} de experiência</span>
     </div>
+    </>
+    
   );
 };
 

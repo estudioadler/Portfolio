@@ -1,10 +1,12 @@
 "use client";
 
 import { ArrowUpRight } from "@phosphor-icons/react";
-import { X } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, Circle, X } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "../Button/Button";
+import { Links } from "../Links/Links";
 
 export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -14,36 +16,52 @@ export const Header = () => {
   };
 
   const menuItems = [
-    { label: "Home", link: "/" },
+    { label: "Inicio", link: "/" },
     { label: "Sobre", link: "/about" },
     { label: "Projetos", link: "/projects" },
     { label: "Skills", link: "/skills" },
     { label: "Contato", link: "/contact" },
   ];
 
+  const socialLinks = [
+    { label: "Github", link: "https://github.com/estudioadler" },
+    { label: "Linkedin", link: "https://www.linkedin.com/in/adlergabriel" },
+    { label: "Twitter", link: "https://twitter.com/a_gabriel20" },
+    { label: "Instagram", link: "https://www.instagram.com/adler__gabriel" },
+  ]
+
   return (
     <header className="flex justify-between items-center w-full h-20 md:h-32 font-sora">
       {/* logotipo */}
       <Link href={"#"} className="flex items-center gap-3">
-        <Image src="/eu.png" alt="logo" width={40} height={40} className="rounded-full shadow-sm" />
-      <div className="flex flex-col text-sm text-neutral-500">
+        <Image src="/eu.png" alt="logo" width={44} height={44} className="rounded-full shadow-sm" />
+      <div className="flex flex-col text-neutral-900">
         <span>Adler Gabriel</span>
-        <span className="text-xs text-neutral-400">- Availabre to Work</span>
+        <div className="flex items-center gap-2">
+          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+           <span className="text-xs text-neutral-400">Disponivel para trabalho</span>
+        </div>
       </div>
       </Link>
-      {/* botao do menu */}
-      <Link
-        href={"#"}
-        onClick={toggleMenu}
-        className="group p-4 rounded-full bg-transparent hover:bg-neutral-100"
-      >
-        <div className="grid grid-cols-2 gap-1 group-hover:transform group-hover:-rotate-90 transition ease-in-out duration-300">
-          <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
-          <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
-          <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
-          <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
+      {/* botao cta */}
+      <div className="flex items-center gap-2">
+        <div className="md:flex gap-2 items-center hidden">
+              <Button iconLeft={<ArrowRight size={18} />} text="Vamos conversar" variant={"black"} />
         </div>
-      </Link>
+        {/* botao hamburguer */}
+        <Link
+          href={"#"}
+          onClick={toggleMenu}
+          className="group p-5 rounded-full bg-neutral-100 hover:bg-neutral-200"
+        >
+          <div className="grid grid-cols-2 gap-1 group-hover:transform group-hover:-rotate-90 transition ease-in-out duration-300">
+            <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
+            <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
+            <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
+            <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
+          </div>
+        </Link>
+      </div>
 
 
 
@@ -65,7 +83,7 @@ export const Header = () => {
         <Link
           href={"#"}
           onClick={toggleMenu}
-          className="text-neutral-100 bg-neutral-900 absolute top-10 md:top-16 right-6 md:right-16 p-3.5 rounded-full hover:bg-neutral-800 active:bg-neutral-700"
+          className="text-neutral-100 bg-neutral-900 absolute top-10 md:top-[44px] right-6 md:right-[61px] p-5 rounded-full hover:bg-neutral-800 active:bg-neutral-700"
         >
             <X size={18} weight="regular" />
         </Link>
@@ -101,46 +119,11 @@ export const Header = () => {
             <span className=" text-[0.625rem] text-neutral-400 uppercase">Redes sociais</span>
           </div>
             <ul className="flex gap-4 text-sm">
-              <li>
-                <Link
-                  href={""}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline-hover-effect"
-                >
-                  Instagram
-                </Link>
+            {socialLinks.map((link: any) => (
+              <li key={link.label} className="flex items-baseline gap-2">
+                <Links url={link.link}>{link.label}</Links>
               </li>
-              <li>
-                <Link
-                  href={""}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline-hover-effect"
-                >
-                  Linkedin
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={""}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline-hover-effect"
-                >
-                  Github
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={""}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline-hover-effect"
-                >
-                  Behance
-                </Link>
-              </li>
+            ))}
             </ul>
           </div>
         </div>

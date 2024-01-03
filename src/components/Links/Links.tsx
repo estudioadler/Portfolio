@@ -2,14 +2,18 @@ import Link from "next/link";
 
 interface ILinkprops {
     children: string,
-    icon: React.ReactNode
+    icon?: React.ReactNode
+    url?: string
 }
 
-export const Links = ({children, icon}:ILinkprops) => {
+export const Links = ({children, icon, url=""}:ILinkprops) => {
   return (
-    <Link href={"#"} className="flex items-start text-sm underline-hover-effect">
+    <>
+    <div className="relative">{icon}</div>
+    <Link href={url} className="absolute -top-0.5 underline-hover-effect">
       {children}
-      {icon}
     </Link>
+    </>
+    
   );
 };

@@ -1,4 +1,4 @@
-import { Copyright } from "@phosphor-icons/react/dist/ssr";
+import { ArrowUp, Copyright } from "@phosphor-icons/react/dist/ssr";
 import Link from "next/link";
 
 export const Footer = () => {
@@ -9,16 +9,14 @@ export const Footer = () => {
   const currentYear = currentDate.getFullYear();
 
   return (
-    <footer className="flex justify-between items-center w-full h-28">
-      <div className="flex gap-2 items-center text-xs text-neutral-500">
+    <footer className="flex justify-between items-center w-full h-20">
+      <div className="flex gap-2 items-center text-sm text-neutral-500">
         <Copyright size={18} />
         {currentYear} - Adler Gabriel
       </div>
       
-      <Link href={"#"} className="grid grid-cols-2 gap-1 transform rotate-45 hover:bg-neutral-100 p-4 rounded-full">
-          <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
-          <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
-          <span className="w-1 h-1 bg-neutral-900 rounded-full"></span>
+      <Link href={"#"} className="text-neutral-900 outline outline-1 outline-neutral-300 hover:outline-neutral-400 p-5 rounded-full">
+          <ArrowUp size={18} />
         </Link>
     </footer>
   );
