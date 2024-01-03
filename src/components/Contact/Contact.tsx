@@ -2,7 +2,6 @@
 
 import { ArrowRight } from "@phosphor-icons/react";
 import { Button } from "../Button/Button";
-import Link from "next/link";
 import { Links } from "../Links/Links";
 export const Contact = () => {
 

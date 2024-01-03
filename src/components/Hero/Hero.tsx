@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { MyTechs } from "../MyTechs/MyTechs";
 import { Plus } from "@phosphor-icons/react/dist/ssr";
-import { Button } from "../Button/Button";
 
 export const Hero = () => {
   const techs = ["JavaScript", "TypeScript", "React.js", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "MySQL", "Tailwind CSS", "Git", "Github", "Figma",];

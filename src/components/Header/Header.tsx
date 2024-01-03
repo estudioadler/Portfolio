@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "@phosphor-icons/react";
-import { ArrowRight, Circle, X } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, X } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";

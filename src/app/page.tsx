@@ -13,7 +13,6 @@ export default function Home() {
     <Hero/>
     <TitleSection title='Projetos Recentes' link='Ver todos'/>
     <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8'>
-
       <CardProjects
       alt=''
       title='Sistema de Login'
