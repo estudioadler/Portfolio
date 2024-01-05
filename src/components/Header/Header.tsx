@@ -33,8 +33,8 @@ export const Header = () => {
   return (
     <header className="flex justify-between items-center w-full h-20 md:h-32 font-sora">
       {/* logotipo */}
-      <Link href={"#"} className="flex items-center gap-3">
-        <Image src="/eu.png" alt="logo" width={44} height={44} className="rounded-full shadow-sm" />
+      <Link href={"/"} className="flex items-center gap-3">
+        <Image src="/eu.png" alt="logo" width={44} height={44} className="rounded-full shadow-sm border border-neutral-300" />
       <div className="flex flex-col text-neutral-900">
         <span>Adler Gabriel</span>
         <div className="flex items-center gap-2">

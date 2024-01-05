@@ -10,7 +10,7 @@ export const Links = ({children, icon, url=""}:ILinkprops) => {
   return (
     <>
     <div className="relative">{icon}</div>
-    <Link href={url} className="absolute -top-0.5 underline-hover-effect">
+    <Link href={url} target="blank" className="absolute -top-0.5 underline-hover-effect">
       {children}
     </Link>
     </>

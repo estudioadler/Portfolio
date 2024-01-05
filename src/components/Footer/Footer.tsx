@@ -9,10 +9,10 @@ export const Footer = () => {
   const currentYear = currentDate.getFullYear();
 
   return (
-    <footer className="flex justify-between items-center w-full h-20">
+    <footer className="flex justify-between items-baseline w-full h-24">
       <div className="flex gap-2 items-center text-sm text-neutral-500">
         <Copyright size={18} />
-        {currentYear} - Adler Gabriel
+        {currentYear} - Adler Gabriel - All rights reserved.
       </div>
       
       <Link href={"#"} className="text-neutral-900 outline outline-1 outline-neutral-300 hover:outline-neutral-400 p-5 rounded-full">

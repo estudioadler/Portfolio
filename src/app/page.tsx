@@ -1,4 +1,3 @@
-'use client'
 import { CardProjects } from '@/components/CardPojects/CardProjects'
 import { Contact } from '@/components/Contact/Contact'
 import { Footer } from '@/components/Footer/Footer'
@@ -6,9 +5,11 @@ import { Header } from '@/components/Header/Header'
 import { Hero } from '@/components/Hero/Hero'
 import { TitleSection } from '@/components/TitleSection/TitleSection'
 
+
 export default function Home() {
   return (
     <>
+    {/* <Preloader/> */}
     <Header/>
     <Hero/>
     <TitleSection title='Projetos Recentes' link='Ver todos'/>
@@ -16,42 +17,42 @@ export default function Home() {
       <CardProjects
       alt=''
       title='Sistema de Login'
-      imgUrl='/000.png'
+      imgUrl=''
       url='github.com'
       description='Sistema de Login desenvolvido em React.js e TypeScript, e autenticação de usuário com NxtAuth e Firebase.'
       />
       <CardProjects
       alt=''
       title='Sistema de Login'
-      imgUrl='/000.png'
+      imgUrl=''
       url='github.com'
       description='Sistema de Login desenvolvido em React.js e TypeScript, e autenticação de usuário com NxtAuth e Firebase.'
       />
       <CardProjects
       alt=''
       title='Sistema de Login'
-      imgUrl='/000.png'
+      imgUrl=''
       url='github.com'
       description='Sistema de Login desenvolvido em React.js e TypeScript, e autenticação de usuário com NxtAuth e Firebase.'
       />
       <CardProjects
       alt=''
       title='Sistema de Login'
-      imgUrl='/000.png'
+      imgUrl=''
       url='github.com'
       description='Sistema de Login desenvolvido em React.js e TypeScript, e autenticação de usuário com NxtAuth e Firebase.'
       />
       <CardProjects
       alt=''
       title='Sistema de Login'
-      imgUrl='/000.png'
+      imgUrl=''
       url='github.com'
       description='Sistema de Login desenvolvido em React.js e TypeScript, e autenticação de usuário com NxtAuth e Firebase.'
       />
       <CardProjects
       alt=''
       title='Sistema de Login'
-      imgUrl='/000.png'
+      imgUrl=''
       url='github.com'
       description='Sistema de Login desenvolvido em React.js e TypeScript, e autenticação de usuário com NxtAuth e Firebase.'
       />

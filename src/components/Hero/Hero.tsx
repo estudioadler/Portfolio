@@ -1,10 +1,9 @@
 
 import Link from "next/link";
 import { MyTechs } from "../MyTechs/MyTechs";
-import { Plus } from "@phosphor-icons/react/dist/ssr";
 
 export const Hero = () => {
-  const techs = ["JavaScript", "TypeScript", "React.js", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "MySQL", "Tailwind CSS", "Git", "Github", "Figma",];
+  const techs = ["JavaScript", "TypeScript", "React.js", "Next.js", "Node.js", "Tailwind CSS", "Figma"];
   return (
     <>
       <section className="flex flex-col py-8 md:py-12">
@@ -19,7 +18,7 @@ export const Hero = () => {
             {techs.map((tech) => (
               <MyTechs key={tech} name={tech} />
             ))}
-            <button className="w-fit py-1.5 px-3 bg-neutral-100 hover:bg-neutral-200 rounded-md"><Plus size={18} /></button>
+            
           </div>
 
         </div>
