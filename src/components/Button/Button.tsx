@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   text?: string;
-  iconLeft?: React.ReactNode;
+  iconLeft?: JSX.Element;
   variant: 'black' | 'white';
   outline?: boolean
   type: "button" | "submit"
