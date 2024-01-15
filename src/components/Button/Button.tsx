@@ -5,11 +5,13 @@ interface ButtonProps {
   iconLeft?: React.ReactNode;
   variant: 'black' | 'white';
   outline?: boolean
+  type: "button" | "submit"
 }
 
-export const Button = ({ text, iconLeft, variant, outline }: ButtonProps) => {
+export const Button = ({ text, iconLeft, variant, outline, type }: ButtonProps) => {
   return (
     <button
+      type={type}
       draggable={false}
       className={`group md:block w-max rounded-full outline outline-1 outline-neutral-300 hover:outline-neutral-400 py-3.5 px-5 relative overflow-hidden z-0
       ${variant === 'black' ? 'bg-neutral-900 text-neutral-100 outline-neutral-900 hover:outline-neutral-900' : 'bg-neutral-50 text-neutral-900'} ${

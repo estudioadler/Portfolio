@@ -1,8 +1,6 @@
 
 import { CardProjects } from '@/components/CardPojects/CardProjects'
 import { Contact } from '@/components/Contact/Contact'
-import { Footer } from '@/components/Footer/Footer'
-import { Header } from '@/components/Header/Header'
 import { TitleSection } from '@/components/TitleSection/TitleSection'
 
 export const metadata = {
@@ -13,7 +11,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-    <Header/>
     <h1 className="text-4xl md:text-6xl uppercase font-sans font-medium py-14">
       Projetos
     </h1>
@@ -63,7 +60,6 @@ export default function Home() {
     </section>
     <TitleSection title='Contato'/>
     <Contact/>
-    <Footer/>
     </>
   )
 }

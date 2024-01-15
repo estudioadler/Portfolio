@@ -1,8 +1,9 @@
-"use client"
-import { AnimatePresence, motion } from 'framer-motion'
 
+"use client"
+
+import { AnimatePresence, motion } from 'framer-motion'
 // Componente de transição de página
-export const Transition = ({ children }: any) => {
+export default function Template ({ children }: any) {
 
   return (
     <AnimatePresence mode="wait">

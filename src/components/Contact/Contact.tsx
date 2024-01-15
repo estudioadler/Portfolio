@@ -1,5 +1,5 @@
 "use client"
-
+import { useForm } from "react-hook-form";
 import { ArrowRight } from "@phosphor-icons/react";
 import { Button } from "../Button/Button";
 import { Links } from "../Links/Links";
@@ -63,7 +63,7 @@ export const Contact = () => {
           maxLength={500}
           required
         ></textarea>
-        <Button variant="white" iconLeft={<ArrowRight size={20} />} text="Enviar" />
+        <Button type="submit" variant="white" iconLeft={<ArrowRight size={20} />} text="Enviar" />
       </form>
     </section>
   );
